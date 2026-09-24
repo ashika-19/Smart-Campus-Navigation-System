@@ -1,0 +1,35 @@
+// Frontend-only copy of the path connections, used purely to DRAW the
+// base map (background roads). Actual routing math still happens on
+// the backend via backend/src/data/campusData.js — keep these two in
+// sync if you add/remove paths, but this file has no effect on routing.
+export const campusEdges = [
+  { from: "main_gate", to: "way_to_main_gate" },
+  { from: "way_to_main_gate", to: "flag_pole" },
+  { from: "flag_pole", to: "transport_workshop" },
+  { from: "flag_pole", to: "way_to_temple_gate", blocked: true },
+  { from: "way_to_temple_gate", to: "temple_gate", blocked: true },
+  { from: "transport_workshop", to: "techlounge" },
+  { from: "techlounge", to: "main_block" },
+  { from: "main_block", to: "playground" },
+  { from: "techlounge", to: "tpt_eb_block" },
+  { from: "tpt_eb_block", to: "j_block_library" },
+  { from: "j_block_library", to: "indoor_auditorium" },
+  { from: "indoor_auditorium", to: "playground" },
+  { from: "playground", to: "girls_hostel_1" },
+  { from: "girls_hostel_1", to: "girls_hostel_2" },
+  { from: "girls_hostel_2", to: "girls_hostel_3" },
+  { from: "girls_hostel_3", to: "canteen" },
+  { from: "canteen", to: "boys_hostel" },
+  { from: "main_block", to: "workshop_block" },
+  { from: "workshop_block", to: "rec_mart" },
+  { from: "rec_mart", to: "hut_cafe" },
+  { from: "hut_cafe", to: "workshop_2" },
+  { from: "workshop_2", to: "workshop_1" },
+  { from: "workshop_1", to: "aero_dept" },
+  { from: "aero_dept", to: "boys_hostel" },
+  { from: "workshop_block", to: "aircraft_area" },
+  { from: "aircraft_area", to: "way_to_main_gate" },
+  { from: "aircraft_area", to: "rec_cafe" },
+  { from: "rec_cafe", to: "academic_block" },
+  { from: "academic_block", to: "aero_dept" },
+];
